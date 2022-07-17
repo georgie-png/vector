@@ -77,9 +77,8 @@ img{
     /* Then we define how is distributed the remaining space */
     justify-content: space-around;
 
-    padding: 0;
+    
     margin: 0.5%;
-    overflow-y: scroll;
 
   }
   .logo{
