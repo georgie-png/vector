@@ -1,0 +1,262 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  background: rgb(44,46,53);
+    background: linear-gradient(270deg, rgba(44,46,53,1) 0%, rgba(98,100,106,1) 96%, rgba(235,238,251,1) 99%); 
+   
+}
+
+canvas {
+  display: block;
+}
+div{
+  -moz-border-radius: 25px;
+  -webkit-border-radius: 25px;
+  border-radius: 5px; 
+  outline-style:double;
+    outline-width: 5px;
+    outline-color: rgb(217, 234, 233);
+    background: rgb(44,46,53);
+    background: linear-gradient(270deg, rgba(44,46,53,1) 0%, rgba(98,100,106,1) 4%, rgba(235,238,251,1) 99%); 
+}
+
+img{
+  -moz-border-radius: 25px;
+  -webkit-border-radius: 25px;
+  border-radius: 5px; 
+  outline-style:double;
+    outline-width: 5px;
+    outline-color: rgb(217, 234, 233);
+    
+}
+.blockRow  {
+   
+    /* We first create a flex layout context */
+    display: flex;
+    
+
+    flex-flow: row wrap;
+    flex: 1;
+    
+    /* Then we define how is distributed the remaining space */
+    justify-content: space-around;
+    
+    padding: 0;
+    margin: 0;
+    
+    width: 94%;
+    height: 100%;
+    list-style: none;
+    
+  }
+
+  .Bodbod {
+    /* We first create a flex layout context */
+    display: flex;
+  
+    flex-flow: row ;
+    flex: 9;
+    
+    /* Then we define how is distributed the remaining space */
+    justify-content: space-around;
+    
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    z-index: 6;
+  }
+  .ScrollVert{
+    
+  margin: 3%;
+    display:flex;
+  
+    flex-flow: column ;
+    flex: 9;
+    /* Then we define how is distributed the remaining space */
+    justify-content: space-around;
+
+    padding: 0;
+    margin: 0.5%;
+    overflow-y: scroll;
+
+  }
+  .logo{
+    position: fixed;
+    top:2%;
+    right: 2%;
+    width: 5%;
+    z-index: 8;
+  
+  }
+  @media (max-width: 800px) {
+    .Bodbod {
+      display:contents;
+      overflow-y: scroll;
+      position:relative;
+      height: 300vh;
+    }
+    .mainColumn{
+      height: 80vh;
+    }
+
+    
+    .logo{
+      width: 15%;
+      min-width: 50px;
+    }
+
+  }
+
+  .baseBlock, .Bodbod{ position: fixed; top: 0; left: 0; width: 100%; height: 100%;}
+
+  .baseBlock{
+    z-index: -1;
+    animation: fadeBG 5s; 
+    opacity: 0;
+    background: rgb(44,46,53);
+    background: radial-gradient(circle, rgba(44,46,53,1) 24%, rgba(235,238,251,1) 73%, rgba(44,46,53,1) 96%); 
+  }
+  .blockColumn  {
+    
+  margin: 3%;
+     /* We first create a flex layout context */
+     display: flex;
+
+     flex-flow: column wrap;
+     flex: 1;
+     /* Then we define how is distributed the remaining space */
+     justify-content: space-around;
+     
+     padding: 0;
+     margin: 0.5%;
+     
+     list-style: none;
+     overflow-wrap: break-word;
+   }
+
+   .mainColumn{
+    
+  margin: 2%;
+    display: flex;
+    flex-flow: column  ;
+    flex: 1;
+    overflow-y: scroll;
+    padding: 0.5%;
+   }
+
+
+   .vector{
+    border-radius: 15px; 
+    display: flex;
+    flex-flow: column  ;
+    flex: 1;
+    margin: 0.5%;
+    }
+
+   .vectorContent{
+    position:relative; 
+    height: 80vh; 
+    width:100%; 
+    background: rgb(44,46,53);
+    background: linear-gradient(270deg, rgba(44,46,53,1) 0%, rgba(98,100,106,1) 4%, rgba(235,238,251,1) 99%); 
+   }
+
+   .vectorContent video {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    object-fit: cover;
+    z-index: 0;
+  }
+  .vectorContent img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    object-fit: cover;
+    z-index: 0;
+  }
+   .blockRow:hover{
+    
+      animation: flexanimation 1s forwards ; 
+    }
+    .blockColumn:hover{
+        animation: flexanimation 1s forwards ; 
+      }
+
+.marqueeContainer{
+
+   /* We first create a flex layout context */
+   display: flex;
+   flex-direction: column;
+   list-style: none;
+
+
+}
+
+.intro { animation: fadeIn 5s; 
+opacity: 0;
+}
+
+@keyframes fadeBG{
+  0%{opacity: 1;
+    z-index: 9;
+    scale: 1;
+  }
+  50%{opacity: 1;}
+  99%{opacity: 0;
+  z-index: 9;}
+  100% { z-index: -1;
+    scale: 1.1; 
+  }
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; 
+  scale: 0.6;}
+  50%{opacity: 1;}
+  100% { opacity: 0; 
+  scale: 0.8;}
+}
+
+
+marquee{
+align-self:center;
+}
+
+
+p{
+  align-self: center;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  justify-content: center;
+  font-size:20pt;
+}
+
+#scroller::-webkit-scrollbar {
+  
+  width: 10px; 
+  margin-right: 10%;
+}
+
+#scroller::-webkit-scrollbar-track {
+  background:  transparent;
+}
+
+#scroller::-webkit-scrollbar-thumb {
+  background:  rgb(20, 53, 102);
+  outline: 1pt;
+  -moz-border-radius: 25px;
+   -webkit-border-radius: 25px;
+   border-radius: 25px; 
+}
+
+
+
+
+@keyframes flexanimation { 
+  to { 
+    flex: 3; 
+  }
+}
+
