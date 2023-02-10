@@ -249,8 +249,9 @@ align-self:center;
 p{
   align-self: center;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  justify-content: center;
+  text-align: justify;
   font-size:20px;
+  align-content:center ;
 }
 
 #scroller::-webkit-scrollbar {
