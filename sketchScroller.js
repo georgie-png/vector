@@ -1,6 +1,6 @@
 var scrollBar;
 var isOver=false;
-var numEl = 8;
+var numEl = 13;
 /** This function sets up our sketch. */
 function setup() {
 
@@ -26,7 +26,8 @@ function fillScroller(numChild){
     iDiv.className = 'blockColumn';
     // randomize colour
     iDiv.style.background = "#" + (Math.random() * 0xFFFFFF<<0).toString(16);
-    iDiv.style.flexGrow = 0;
+    iDiv.style.flexGrow = 1;
+    iDiv.style.flexShrink = 1;
     var txt = document.createElement('p');
     txt.textContent='Look!'
     iDiv.append(txt);

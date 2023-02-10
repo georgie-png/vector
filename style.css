@@ -8,6 +8,10 @@ html, body {
    
 }
 
+a{
+  color: rgb(77, 75, 78);
+}
+
 canvas {
   display: block;
 }
@@ -37,16 +41,16 @@ img{
     display: flex;
     
 
-    flex-flow: row wrap;
+    flex-flow: row ;
     flex: 1;
     
     /* Then we define how is distributed the remaining space */
     justify-content: space-around;
     
     padding: 0;
-    margin: 0;
+    margin: 10px;
     
-    width: 94%;
+    width: 100%;
     height: 100%;
     list-style: none;
     
@@ -69,17 +73,32 @@ img{
   }
   .ScrollVert{
     
-  margin: 3%;
+    /*overflow-y: scroll;*/
+    margin: 3%;
     display:flex;
-  
     flex-flow: column ;
     flex: 9;
     /* Then we define how is distributed the remaining space */
-    justify-content: space-around;
+    justify-content: space-between  ;
 
+    height: 100%;
     
     margin: 0.5%;
 
+  }
+
+  .quote{
+    width: 95%;
+  }
+  .quote > p{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    }
+  }
+  .blockRow:hover{
+    
+    animation: flexanimation 1s forwards ; 
   }
   .logo{
     position: fixed;
@@ -92,7 +111,6 @@ img{
   @media (max-width: 800px) {
     .Bodbod {
       display:contents;
-      overflow-y: scroll;
       position:relative;
       height: 300vh;
     }
@@ -180,9 +198,7 @@ img{
     
       animation: flexanimation 1s forwards ; 
     }
-    .blockColumn:hover{
-        animation: flexanimation 1s forwards ; 
-      }
+
 
 .marqueeContainer{
 
@@ -193,7 +209,12 @@ img{
 
 
 }
-
+.researchImg{
+  margin: 10pt;
+  display: block;
+margin-left: auto;
+margin-right: auto;
+}
 .intro { animation: fadeIn 5s; 
 opacity: 0;
 }
@@ -229,13 +250,13 @@ p{
   align-self: center;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   justify-content: center;
-  font-size:20pt;
+  font-size:20px;
 }
 
 #scroller::-webkit-scrollbar {
   
-  width: 10px; 
-  margin-right: 10%;
+  width: 4px; 
+  margin-right: 20%;
 }
 
 #scroller::-webkit-scrollbar-track {
@@ -243,8 +264,11 @@ p{
 }
 
 #scroller::-webkit-scrollbar-thumb {
-  background:  rgb(20, 53, 102);
+  background:  rgba(178, 206, 244, 0);
   outline: 1pt;
+  outline-style:double;
+    outline-width: 3px;
+    outline-color: rgb(217, 234, 233);
   -moz-border-radius: 25px;
    -webkit-border-radius: 25px;
    border-radius: 25px; 
@@ -256,6 +280,7 @@ p{
 @keyframes flexanimation { 
   to { 
     flex: 3; 
+    background: rgb(20, 53, 102);
   }
 }
 

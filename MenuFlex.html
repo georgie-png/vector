@@ -15,42 +15,52 @@
 
   <body>
     <div id="#iblock" class="BaseBlock" style="height:100%; width:100%; position:relative;">
-      <!-- everything -->
-        <!-- Menu bar-->
-        <div class="blockRow" style="  background-image: linear-gradient(to top, #accbee 0%, #e7f0fd 100%); max-height: 150px;">
-          <!-- Linked Logo-->
-          <a href="./index.html"class="blockColumn" style="background: rgb(44,46,53);">
-            <img  src="./imgs/Logo.png" class="blockColumn" style=" object-fit:contain;">
-          </a>
-           <!-- options-->
-          <div class="blockRow" style="flex: 1; background-image: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);">
-            <p>Share</p>
-          </div>
-          <div class="blockColumn" style=" background-image: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);">
-            <p>Show</p>
-          </div>
-          <div class="blockRow" style="background-image: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);">
-          <p>Look</p>
-          </div>
-          <div class="blockColumn" style="background-image: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);">
-          <p>Know</p>
-          </div>
-        </div>
-
+      
          <!-- Body-->
         <div class="Bodbod" >
            <!-- Columns-->
-          <div class="blockColumn" style="background: rgb(182, 114, 180);">
+          <div class="blockColumn" style="background: rgb(182, 114, 180); padding: 1%; flex-wrap: wrap; width: 50%;">
+            <h1>Research</h1>
+            <div class="blockRow"  style="flex: 4;flex-wrap: nowrap; background: rgb(114, 141, 182); overflow-y:hidden;">
+             <!-- <script src="./sketchScroller.js"></script>-->
             
-            <div class="blockColumn" id="scroller" style=" flex: 4;flex-wrap: nowrap; background: rgb(114, 141, 182); overflow-y:auto;">
-              <script src="./sketchScroller.js"></script>
-              
+
+             <div class="quotes ScrollVert" id="scroller" style="flex: 2 ;flex-wrap: nowrap; background: rgb(107, 89, 226);overflow-y:scroll; overflow-x: hidden;">
+             <div class="quote blockColumn" id="options">
+              <p >Options</p>
+             </div>
+              <script src="scrollLoaderJson.js"></script>
+
+             </div>
+             
+             <div id="panel" class="blockColumn" style="flex: 4;flex-wrap: nowrap; background: rgb(18, 108, 224); align-content: center;">
+              <div id="optionSelecter" class="blockColumn">
+                <div>
+                  <h2>Search Options</h2>
+                  <p>Use the search fields to help explore and filter through the reseach bellow.</p>
+                </div>  
+
+                  <fieldset>
+                  <legend>Add Your Tags!</legend>
+                  <input class="tag" type="checkbox" name="tags" id="tag1" value="Tag1" onclick="return ">
+                  <label for="tag1">Tag</label>
+                
+                  <input class="tag" type="checkbox" name="tags" id="tag1" value="Tag1" onclick="return ">
+                  <label for="tag1">Tag</label>
+                  
+                  <input class="tag" type="checkbox" name="tags" id="tag1" value="Tag1" onclick="return ">
+                  <label for="tag1">Tag</label>
+                    
+                  </fieldset>
+              </div>
+
+             </div>
+
+         </div> 
+
+         
     
-            
-            </div>
-         </div>
-          <div class="blockRow" id="sketch"style="align-self: center; flex: 2; background-image: linear-gradient(120deg, #fccb90 0%, #d57eeb 100%); ">
-            
+          
           </div>
           
         </div>
