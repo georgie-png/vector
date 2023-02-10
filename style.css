@@ -108,6 +108,15 @@ img{
     z-index: 8;
   
   }
+
+  .join{
+    position: fixed;
+    top:90%;
+    right: 2%;
+    width: 25%;
+    z-index: 8;
+    background: #2c2e35;
+  }
   @media (max-width: 800px) {
     .Bodbod {
       display:contents;
