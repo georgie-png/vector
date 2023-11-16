@@ -1,11 +1,56 @@
+@font-face {
+  font-family: "FennHandRegular";
+  src: url("/fonts/fenn-hand-font/FennHandRegular-AL3AD.ttf");
+}
+
+@font-face {
+  font-family: "SoSerious";
+  src: url("/fonts/so-serious-font/SoSerious-d9YEl.otf");
+}
+
+@font-face {
+  font-family: "SuperDessert";
+  src: url("/fonts/super-dessert-font/SuperDessert-EaAyj.ttf");
+}
+
+
 html, body {
   margin: 0;
   padding: 0;
   width: 100%;
   height: 100%;
-  background: rgb(44,46,53);
-    background: linear-gradient(270deg, rgba(44,46,53,1) 0%, rgba(98,100,106,1) 96%, rgba(235,238,251,1) 99%); 
-   
+
+  background: rgb(255,255,255);
+background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(231,187,206,1) 52%, rgba(148,175,233,0.9797852246367297) 100%);
+}
+
+marquee{
+  align-self:center;
+  }
+  
+  
+  p{
+    align-self: center;
+    font-family: 'SoSerious', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: justify;
+    font-size: 2em;
+    align-content:center ;
+  }
+
+h3{
+  font-family: "FennHandRegular";
+}
+
+h2{
+  font-family: "SuperDessert";
+  align-self: center;
+
+}
+
+h1{
+  font-family: "SuperDessert";
+  align-self: center;
+
 }
 
 a{
@@ -16,10 +61,10 @@ canvas {
   display: block;
 }
 div{
-  -moz-border-radius: 25px;
-  -webkit-border-radius: 25px;
-  border-radius: 5px; 
-  outline-style:double;
+    -moz-border-radius: 25px;
+    -webkit-border-radius: 25px;
+    border-radius: 5px; 
+    outline-style:double;
     outline-width: 5px;
     outline-color: rgb(217, 234, 233);
     background: rgb(44,46,53);
@@ -27,10 +72,10 @@ div{
 }
 
 img{
-  -moz-border-radius: 25px;
-  -webkit-border-radius: 25px;
-  border-radius: 5px; 
-  outline-style:double;
+    -moz-border-radius: 25px;
+    -webkit-border-radius: 25px;
+    border-radius: 5px; 
+    outline-style:double;
     outline-width: 5px;
     outline-color: rgb(217, 234, 233);
     
@@ -70,6 +115,10 @@ img{
     margin: 0;
     list-style: none;
     z-index: 6;
+
+    background: rgb(255,255,255);
+    background: radial-gradient(circle, rgba(255,255,255,1) 8%, rgba(146,207,250,1) 74%);
+  
   }
   .ScrollVert{
     
@@ -95,7 +144,7 @@ img{
     overflow: hidden;
     text-overflow: ellipsis;
     }
-  }
+  
   .blockRow:hover{
     
     animation: flexanimation 1s forwards ; 
@@ -109,11 +158,16 @@ img{
   
   }
 
+  .mainText{
+    padding: 5%;
+    font-size: 1.5em;
+  }
+
   .join{
     position: fixed;
     top:90%;
     right: 2%;
-    width: 25%;
+    width: 30%;
     z-index: 8;
     background: #2c2e35;
   }
@@ -125,12 +179,21 @@ img{
     }
     .mainColumn{
       height: 80vh;
+      margin: 5%;
+      margin-bottom: 15%;
     }
 
     
     .logo{
       width: 15%;
       min-width: 50px;
+    }
+
+  }
+  @media (min-width: 800px) {
+
+    .mainColumn{
+      margin: 2%;
     }
 
   }
@@ -146,7 +209,7 @@ img{
   }
   .blockColumn  {
     
-  margin: 3%;
+    margin: 3%;
      /* We first create a flex layout context */
      display: flex;
 
@@ -164,7 +227,6 @@ img{
 
    .mainColumn{
     
-  margin: 2%;
     display: flex;
     flex-flow: column  ;
     flex: 1;
@@ -185,8 +247,8 @@ img{
     position:relative; 
     height: 80vh; 
     width:100%; 
-    background: rgb(44,46,53);
-    background: linear-gradient(270deg, rgba(44,46,53,1) 0%, rgba(98,100,106,1) 4%, rgba(235,238,251,1) 99%); 
+    background: rgba(138, 143, 161, 0.122);
+    border-radius: 30%;
    }
 
    .vectorContent video {
@@ -250,18 +312,7 @@ opacity: 0;
 }
 
 
-marquee{
-align-self:center;
-}
 
-
-p{
-  align-self: center;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  text-align: justify;
-  font-size:20px;
-  align-content:center ;
-}
 
 #scroller::-webkit-scrollbar {
   
