@@ -67,8 +67,8 @@ div{
     outline-style:double;
     outline-width: 5px;
     outline-color: rgb(217, 234, 233);
-    background: rgb(44,46,53);
-    background: linear-gradient(270deg, rgba(44,46,53,1) 0%, rgba(98,100,106,1) 4%, rgba(235,238,251,1) 99%); 
+    background: rgb(44,46,53,50);
+    background: linear-gradient(270deg, rgba(44, 46, 53, 0.112) 0%, rgba(98, 100, 106, 0.153) 4%, rgba(235, 238, 251, 0.17) 99%); 
 }
 
 img{
@@ -160,7 +160,7 @@ img{
 
   .mainText{
     padding: 5%;
-    font-size: 1.5em;
+    font-size: 1.6em;
   }
 
   .join{
@@ -181,6 +181,10 @@ img{
       height: 80vh;
       margin: 5%;
       margin-bottom: 15%;
+    }
+
+    .mainText{
+      font-size: 2em;
     }
 
     
@@ -248,7 +252,11 @@ img{
     height: 80vh; 
     width:100%; 
     background: rgba(138, 143, 161, 0.122);
-    border-radius: 30%;
+    border-radius: 15%;
+    overflow: hidden;
+    z-index: 1;
+    flex-flow: row nowrap;
+    align-items: center;  
    }
 
    .vectorContent video {
